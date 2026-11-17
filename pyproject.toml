@@ -1,0 +1,36 @@
+[build-system]
+requires = ["hatchling"]
+build-backend = "hatchling.build"
+
+[tool.hatch.build]
+exclude = ["*.pyc", "*.log", ".git", "dist", "venv", "*__pycache__*"]
+
+[tool.hatch.build.targets.wheel]
+packages = ["src"]
+
+[project]
+name = "feddelta"
+version = "0.1.0"
+description = "FedDelta: Federated Learning Framework"
+readme = "README.md"
+requires-python = ">=3.10"
+dependencies = [
+    "colorama>=0.4.6",
+    "matplotlib>=3.10.0",
+    "numpy>=2.0",
+    "pandas>=2.0",
+    "pyarrow>=15.0",
+    "pyfiglet>=1.0.4",
+    "pyyaml>=6.0",
+    "scikit-learn>=1.8.0",
+    "scipy>=1.17.0",
+    "xgboost>=3.2.0",
+]
+classifiers = [
+    "Development Status :: 4 - Beta",
+    "Intended Audience :: Science/Research",
+    "Topic :: Scientific/Engineering :: Artificial Intelligence",
+    "Programming Language :: Python :: 3.10",
+    "Programming Language :: Python :: 3.11",
+    "Programming Language :: Python :: 3.12",
+]
